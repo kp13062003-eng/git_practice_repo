@@ -39,13 +39,66 @@ print(Num) #[10, 5, 10, 3, 5, 10, 2, 1]
 print(Num.count(10)) #3
 
 # Take 5 numbers from the user and store them in a list.
-list =[]
+list1 =[]
 for i in range(5):
     num = int(input("Enter The Number: "))
-    list.append(num)
+    list1.append(num)
 
 print("Your list is: ",list) #Your list is:  [2, 3, 4, 3, 3]
 
+# Find smallest number in list
+a = [5, 2, 8, 1]
+print(min(a)) #1
+
+# Count even numbers in list
+a = [5, 2, 8, 1]
+print(a) #[5, 2, 8, 1]
+count = 0
+for i in a:
+    if i % 2 == 0:
+        print(i) # 2, 8
+        count = count + 1
+print("count of even number:", count) #count of even number: 2
+
+# Create a list of squares from 1 to 10
+squares = []
+for i in range(1,11):
+    num = i * i
+    squares.append(num)
+print("Square of 1 to 10 numbers:", squares) #[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+
+# Reverse list without using reverse()
+print(a) #[5, 2, 8, 1]
+print(a[::-1]) #[1, 8, 2, 5]
+
+# Find second largest number
+print(a) # #[5, 2, 8, 1]
+a.sort()
+print(a) #[1, 2, 5, 8]
+print(a[-2]) #5
+
+# Remove all duplicate values from list
+a1 = [1,4,1,5,2,1]
+print(a1) #[1, 4, 1, 5, 2, 1]
+print(list(set(a1))) #[1, 2, 4, 5]
+
+# Merge two lists
+    # by using concatenation
+a1 = [1,4,1,5,2,1]
+a2 = [6,7,4]
+merge = a1 + a2
+print(merge) #[1, 4, 1, 5, 2, 1, 6, 7, 4]
+
+    #By using extend()
+a1 = [1,4,1,5,2,1]
+a2 = [6,7,4]
+a1.extend(a2)
+print(a1) #[1, 4, 1, 5, 2, 1, 6, 7, 4]
+ 
+# Convert string into list of characters
+# "python"
+a = "python"
+print(list(a)) #['p', 'y', 't', 'h', 'o', 'n']
 
 ## 2.Tuple Questions
 
@@ -67,7 +120,10 @@ print(Tuple2) #(70,)
 # Convert a tuple into a list.
 print(Tuple) #(10, 30, 5, 8, 9)
 print(list(Tuple)) #[10, 30, 5, 8, 9]
+
 # Check whether a value exists in a tuple.
+print(9 in Tuple) #True
+print(90 in Tuple) #False
 
 # Concatenate two tuples.
 num = Tuple + Tuple2
@@ -181,6 +237,5 @@ print(type(set1)) #<class 'set'>
 # Remove duplicate values from a list using a set.
 my_list = [10, "Kavita", 2.2, 10, 2.2]
 print(my_list) #[10, 'Kavita', 2.2, 10, 2.2]
-set1 = set(my_list)
-print(set1) #{10, 2.2, 'Kavita'}
-print(list(set1)) #[10, 'Kavita', 2.2]
+set1 = list(set(my_list))
+print(set1) #[10, 2.2, 'Kavita']

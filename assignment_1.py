@@ -25,7 +25,9 @@ print(len(Fruits)) #6
 
 # Sort a list of numbers in ascending order.
 Num = [1, 2, 10, 5, 3, 10, 5, 10]
-print(Num) #[1, 2, 10, 5, 3, 10, 5, 10]
+print(Num)
+Num.sort()
+print(Num) #[1, 2, 3, 5, 5, 10, 10, 10]
 
 # Reverse a list.
     #By using Slicing
